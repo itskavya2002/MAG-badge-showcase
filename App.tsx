@@ -381,23 +381,24 @@ const SeismicLogo = () => (
       <footer className="py-20 md:py-32 text-center border-t border-[#432F39]/10 relative overflow-hidden bg-[#F0EFEF]/60 backdrop-blur-xl">
         <div className="max-w-5xl mx-auto px-6 relative z-10">
           <div className="mb-10 md:mb-14 text-center">
-  {/* Logo */}
-  <div className="relative flex justify-center mb-5 md:mb-6">
-    <div className="absolute w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-full blur-2xl bg-[#D0B583] opacity-40" />
-    <img
-      src="./assets/logo.svg"
-      className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24"
-      alt="Seismic Logo"
-    />
-  </div>
+      {/* Logo */}
+      <div className="relative flex justify-center mb-5 md:mb-6">
+        <div className="absolute w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-full blur-2xl bg-[#D0B583] opacity-40" />
+        <img
+          src={Logo}
+          className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 object-contain"
+          alt="Seismic Logo"
+          draggable={false}
+        />
+      </div>
 
-  {/* Tagline */}
-  <p className="uppercase font-black text-[#A69550]
-    tracking-[0.45em] sm:tracking-[0.6em] md:tracking-[0.8em]
-    text-[9px] sm:text-[10px] md:text-[11px]">
-    Magnitude Legacy
-  </p>
-</div>
+      {/* Tagline */}
+      <p className="uppercase font-black text-[#A69550]
+        tracking-[0.45em] sm:tracking-[0.6em] md:tracking-[0.8em]
+        text-[9px] sm:text-[10px] md:text-[11px]">
+        Magnitude Legacy
+      </p>
+      </div>
 
           
           <h2 className="text-3xl md:text-5xl font-black text-[#151515] mb-12 md:mb-20 leading-tight md:leading-none tracking-tighter">Progress defines status. Your journey is only beginning.</h2>
