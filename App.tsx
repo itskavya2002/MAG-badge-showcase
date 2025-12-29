@@ -421,7 +421,7 @@ const SeismicLogo = () => (
           <div className="flex flex-col items-center space-y-12 md:space-y-16">
             {/* Social Handles Section - Premium Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 w-full max-w-4xl">
-              <a href="https://x.com/SeismicSys" className="group flex flex-col items-center space-y-3 md:space-y-4 p-6 md:p-8 rounded-[1.5rem] md:rounded-[2.5rem] bg-white/40 border border-[#432F39]/10 hover:bg-white transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
+              <a href="https://x.com/SeismicSys" target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center space-y-3 md:space-y-4 p-6 md:p-8 rounded-[1.5rem] md:rounded-[2.5rem] bg-white/40 border border-[#432F39]/10 hover:bg-white transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
                 <div className="p-3 md:p-4 bg-[#D9D6CB] rounded-[1rem] md:rounded-[1.5rem] group-hover:bg-[#151515] transition-all duration-500 shadow-inner">
                   <XLogo className="w-6 h-6 md:w-8 md:h-8 text-[#151515] group-hover:text-white transition-colors" />
                 </div>
@@ -431,7 +431,7 @@ const SeismicLogo = () => (
                 </div>
               </a>
 
-              <a href="https://discord.gg/seismic" className="group flex flex-col items-center space-y-3 md:space-y-4 p-6 md:p-8 rounded-[1.5rem] md:rounded-[2.5rem] bg-white/40 border border-[#432F39]/10 hover:bg-white transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
+              <a href="https://discord.gg/seismic" target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center space-y-3 md:space-y-4 p-6 md:p-8 rounded-[1.5rem] md:rounded-[2.5rem] bg-white/40 border border-[#432F39]/10 hover:bg-white transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
                 <div className="p-3 md:p-4 bg-[#D9D6CB] rounded-[1rem] md:rounded-[1.5rem] group-hover:bg-[#5865F2] transition-all duration-500 shadow-inner">
                   <DiscordLogo className="w-6 h-6 md:w-8 md:h-8 text-[#151515] group-hover:text-white transition-colors" />
                 </div>
@@ -441,7 +441,7 @@ const SeismicLogo = () => (
                 </div>
               </a>
 
-              <a href="https://github.com/SeismicSystems" className="group flex flex-col items-center space-y-3 md:space-y-4 p-6 md:p-8 rounded-[1.5rem] md:rounded-[2.5rem] bg-white/40 border border-[#432F39]/10 hover:bg-white transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 sm:col-span-2 lg:col-span-1">
+              <a href="https://github.com/SeismicSystems" target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center space-y-3 md:space-y-4 p-6 md:p-8 rounded-[1.5rem] md:rounded-[2.5rem] bg-white/40 border border-[#432F39]/10 hover:bg-white transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 sm:col-span-2 lg:col-span-1">
                 <div className="p-3 md:p-4 bg-[#D9D6CB] rounded-[1rem] md:rounded-[1.5rem] group-hover:bg-[#2dba4e] transition-all duration-500 shadow-inner">
                   <Github className="w-6 h-6 md:w-8 md:h-8 text-[#151515] group-hover:text-white transition-colors" />
                 </div>
