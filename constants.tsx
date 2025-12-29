@@ -12,6 +12,8 @@ import mag8 from './assets/badges/mag-8.svg';
 import mag9 from './assets/badges/mag-9.svg';
 
 
+
+
 export const BADGES: BadgeData[] = [
   {
     id: 1,
