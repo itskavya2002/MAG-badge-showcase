@@ -50,31 +50,6 @@ const App: React.FC = () => {
    useEffect(() => {
     setIsVisible(true);
 
-    // Protection logic
-    const handleContextMenu = (e: MouseEvent) => {
-      e.preventDefault();
-    };
-
-    const handleDragStart = (e: DragEvent) => {
-      e.preventDefault();
-    };
-
-    const handleKeydown = (e: KeyboardEvent) => {
-      // Prevent common shortcuts like Ctrl+S, Ctrl+U, Ctrl+Shift+I, etc.
-      if ((e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'u' || e.key === 'i' || e.key === 'c')) {
-        e.preventDefault();
-      }
-    };
-
-    document.addEventListener('contextmenu', handleContextMenu);
-    document.addEventListener('dragstart', handleDragStart);
-    document.addEventListener('keydown', handleKeydown);
-
-    return () => {
-      document.removeEventListener('contextmenu', handleContextMenu);
-      document.removeEventListener('dragstart', handleDragStart);
-      document.removeEventListener('keydown', handleKeydown);
-    };
   }, []);
 
   
@@ -136,7 +111,7 @@ const App: React.FC = () => {
 
 // Seismic Logo Component (Clean / Brand Style)
 const SeismicLogo = () => (
-  <div className="flex flex-col items-center justify-center mb-12 md:mb-20 text-center">
+  <div className="flex flex-col items-center justify-start mb-12 md:mb-20 text-center">
     {/* Logo */}
     <div className="relative flex justify-center items-center mb-6 md:mb-8">
       {/* Soft ambient glow */}
@@ -169,7 +144,7 @@ const SeismicLogo = () => (
       </div>
 
       {/* Hero Section */}
-      <section className="relative h-[90vh] md:h-screen flex flex-col items-center justify-center text-center px-6 overflow-hidden">
+      <section className="relative min-h-[85vh] md:min-h-screen flex flex-col items-center justify-start text-center px-6 pt-12 md:pt-20 overflow-hidden">
         <div className={`transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-10 scale-95'}`}>
           <SeismicLogo />
           
@@ -378,7 +353,13 @@ const SeismicLogo = () => (
       </section>
 
       {/* Achievement Footer */}
-      <footer className="py-20 md:py-32 text-center border-t border-[#432F39]/10 relative overflow-hidden bg-[#F0EFEF]/60 backdrop-blur-xl">
+      <footer className=" min-h-screen
+  flex items-center
+  py-12 md:py-16
+  text-center
+  border-t border-[#432F39]/10
+  relative overflow-hidden
+  bg-[#F0EFEF]/60 backdrop-blur-xl">
         <div className="max-w-5xl mx-auto px-6 relative z-10">
           <div className="mb-10 md:mb-14 text-center">
       {/* Logo */}
@@ -401,9 +382,9 @@ const SeismicLogo = () => (
       </div>
 
           
-          <h2 className="text-3xl md:text-5xl font-black text-[#151515] mb-12 md:mb-20 leading-tight md:leading-none tracking-tighter">Progress defines status. Your journey is only beginning.</h2>
+          <h2 className="text-2xl md:text-4xl font-black text-[#151515] mb-8 md:mb-10 leading-tight md:leading-none tracking-tighter">Progress defines status. Your journey is only beginning.</h2>
           
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-12 mb-20 md:mb-24 px-10 sm:px-0">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-12 mb-10 md:mb-12 px-10 sm:px-0">
             <div className="flex flex-col items-center">
               <span className="text-3xl md:text-4xl font-black text-[#151515]">09</span>
               <span className="text-[9px] md:text-[10px] uppercase tracking-widest font-black text-[#432F39] mt-2 opacity-70">Magnitudes</span>
@@ -418,7 +399,7 @@ const SeismicLogo = () => (
             </div>
           </div>
 
-          <div className="flex flex-col items-center space-y-12 md:space-y-16">
+          <div className="flex flex-col items-center space-y-8 md:space-y-10">
             {/* Social Handles Section - Premium Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 w-full max-w-4xl">
               <a href="https://x.com/SeismicSys" target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center space-y-3 md:space-y-4 p-6 md:p-8 rounded-[1.5rem] md:rounded-[2.5rem] bg-white/40 border border-[#432F39]/10 hover:bg-white transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
@@ -453,7 +434,7 @@ const SeismicLogo = () => (
             </div>
 
             {/* Unofficial Disclaimer & Credit Section */}
-            <div className="relative pt-12 md:pt-16 pb-4 md:pb-8 border-t border-[#432F39]/10 w-full max-w-3xl">
+            <div className="relative pt-8 md:pt-10 pb-2 border-t border-[#432F39]/10 w-full max-w-3xl">
               <div className="flex flex-col items-center space-y-4 md:space-y-6">
                 <p className="text-xs md:text-lg font-black text-[#151515] tracking-[0.2em] md:tracking-[0.3em] uppercase opacity-90 leading-relaxed max-w-2xl px-4">
                   Unofficial community made showcase<br />for the Seismic Discord
