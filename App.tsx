@@ -144,7 +144,7 @@ const SeismicLogo = () => (
       </div>
 
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] md:min-h-screen flex flex-col items-center justify-start text-center px-6 pt-12 md:pt-20 overflow-hidden">
+      <section className="relative h-screen flex flex-col items-center justify-center text-center px-6 overflow-hidden">
         <div className={`transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-10 scale-95'}`}>
           <SeismicLogo />
           
@@ -154,7 +154,7 @@ const SeismicLogo = () => (
             <div className="h-[1px] w-8 md:w-12 bg-[#432F39]/20"></div>
           </div>
           
-          <h1 className="text-4xl sm:text-7xl md:text-9xl font-black text-[#151515] mb-6 tracking-tighter leading-tight md:leading-none">
+          <h1 className="text-4xl sm:text-6xl md:text-8xl font-black text-[#151515] mb-4 tracking-tighter leading-tight">
             Magnitude<br /><span className="text-[#A69550] tracking-normal">Journey</span>
           </h1>
           
@@ -162,7 +162,7 @@ const SeismicLogo = () => (
             A contribution-based evolution. From Magnitude 1.0 to 9.0, your status is a reflection of your commitment to the Seismic collective.
           </p>
           
-          <div className="mt-12 flex flex-col items-center space-y-8">
+          <div className="mt-8 flex flex-col items-center space-y-4">
             <button 
               onClick={() => document.getElementById('grid')?.scrollIntoView({ behavior: 'smooth' })}
               className="group relative px-8 md:px-10 py-4 md:py-5 bg-[#432F39] text-white rounded-xl md:rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-[0_20px_60px_-15px_rgba(67,47,57,0.5)] hover:-translate-y-1 active:scale-95"
@@ -170,7 +170,7 @@ const SeismicLogo = () => (
               <span className="relative z-10 font-black tracking-[0.2em] uppercase text-[10px] md:text-xs">Access Ranks</span>
               <div className="absolute inset-0 bg-gradient-to-r from-[#A69550] to-[#7E5E6E] transform translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
             </button>
-            <div className="animate-bounce">
+            <div className="hidden md:block animate-bounce">
               <ChevronDown className="text-[#A69550] w-6 h-6 opacity-60" />
             </div>
           </div>
@@ -178,9 +178,9 @@ const SeismicLogo = () => (
       </section>
 
       {/* Badge Progression Grid */}
-      <section id="grid" className="py-16 md:py-32 px-4 md:px-12 bg-[#F0EFEF]/40 backdrop-blur-md border-y border-[#432F39]/10 relative">
+      <section id="grid" className="py-14 md:py-24 px-4 md:px-12 bg-[#F0EFEF]/40 backdrop-blur-md border-y border-[#432F39]/10 relative">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-16 md:mb-24 text-center">
+          <div className="mb-12 md:mb-16 text-center">
             <p className="text-[#A69550] font-black text-[10px] md:text-xs tracking-[0.5em] uppercase mb-4">Official Discord Roles</p>
             <h2 className="text-3xl md:text-6xl font-black text-[#151515] mb-6 tracking-tight">Magnitude Hierarchy</h2>
             <div className="w-24 md:w-32 h-1.5 bg-gradient-to-r from-[#A69550] to-transparent mx-auto rounded-full"></div>
@@ -191,7 +191,7 @@ const SeismicLogo = () => (
               <div
                 key={badge.id}
                 onClick={() => handleBadgeClick(badge)}
-                className={`group cursor-pointer relative flex flex-col items-center p-8 rounded-3xl transition-all duration-500 hover:bg-white/60 hover:shadow-[0_20px_50px_rgba(156,117,84,0.15)] ${
+                className={`group cursor-pointer relative flex flex-col items-center p-6 md:p-7 rounded-3xl transition-all duration-500 hover:bg-white/60 hover:shadow-[0_20px_50px_rgba(156,117,84,0.15)] ${
                   !badge.unlocked ? 'opacity-70 grayscale blur-[1px]' : 'opacity-100'
                 } transform transition-all hover:scale-105 active:scale-95`}
                 style={{ transitionDelay: `${index * 50}ms` }}
@@ -202,7 +202,7 @@ const SeismicLogo = () => (
                   </div>
                 )}
                 
-                <div className="mb-6 relative">
+                <div className="mb-4 relative">
                   <div 
                     className="absolute inset-0 rounded-full blur-2xl opacity-0 group-hover:opacity-30 transition-opacity duration-500"
                     style={{ backgroundColor: badge.color }}
@@ -240,7 +240,7 @@ const SeismicLogo = () => (
               <img src={Logo} className="w-96 h-96 object-contain" alt="" />
             </div>
 
-            <div className="flex justify-center relative transform hover:scale-105 transition-transform duration-1000">
+            <div className="flex justify-center relative transform hover:scale-[1.03] transition-transform duration-1000">
                <div className="absolute inset-0 bg-white blur-[80px] md:blur-[100px] rounded-full scale-150 opacity-50"></div>
                 <BadgeIcon
                   src={selectedBadge.icon}
